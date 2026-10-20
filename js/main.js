@@ -61,9 +61,9 @@ function fillPhoto(el,src,alt,name,motif,v){
   ph.remove();
   const tag=el.querySelector(".tag");
   if(tag)tag.remove();
-  el.prepend(im);
  };
  im.onerror=()=>{im.remove()};
+ el.prepend(im);
  im.src=src;
 }
 $$("[data-img]").forEach(el=>fillPhoto(el,el.dataset.img,el.dataset.alt,el.dataset.name,el.dataset.motif==="circuit"?"elec":el.dataset.motif||"elec",0));
